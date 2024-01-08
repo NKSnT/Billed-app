@@ -190,9 +190,7 @@ describe('Given I am connected as an employee', () => {
                 type: 'image/jpeg'
             });
 
-            console.log(screen.getByTestId('file').files);
             input1.addEventListener('change', handleChangeFile);
-            //userEvent.upload(input1, file);
             fireEvent.change(input1, { target: { files: [file] } });
             expect(handleChangeFile).toHaveBeenCalled();
             //-------------------------

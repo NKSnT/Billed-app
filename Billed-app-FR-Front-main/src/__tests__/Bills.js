@@ -104,11 +104,11 @@ describe('Given I am connected as an employee', () => {
             });
 
             const eye = screen.getByTestId('icon-eye');
-            const handleClickIconEye = jest.fn(bills2.handleClickIconEye(eye)); //ajout de la close if modal ==function dans bills container
+            const handleClickIconEye = jest.fn(bills2.handleClickIconEye(eye)); //ajout de la close if modal == function dans bills container
             eye.addEventListener('click', handleClickIconEye);
             userEvent.click(eye);
             expect(handleClickIconEye).toHaveBeenCalled();
-            const modale = screen.getByTestId('modaleFile'); //ajout test id au billUi
+            const modale = screen.getByTestId('modaleFile'); //ajout test id a billUi
             expect(modale).toBeTruthy();
         });
     });
